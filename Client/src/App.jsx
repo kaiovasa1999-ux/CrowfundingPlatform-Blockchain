@@ -1,5 +1,7 @@
 import React from 'react';
 import { Route,Routes } from 'react-router-dom';    
+
+import { SideBar,NavBar } from './components';
 import {CampaignDetails,CreateCampaign,Profile, Home} from './pages'
 
 const App = () => {
@@ -7,10 +9,11 @@ const App = () => {
    //tailind utils classes
    <div className="relative sm:-8 p-4 bg-[#13131a] min-h-screen flex flex-row">
    <div className="sm:flex hidden mr-10 relative">
-        SideBar
+        <SideBar />
    </div>
    <div className="flex-1 max-sm:w-full max-w-[1280px] mx-auto sm:pr-5">
-        NavBar
+        <NavBar />
+
         <Routes>
           <Route path='/' element={<Home />}/>
         </Routes>
